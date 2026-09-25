@@ -1,0 +1,5 @@
+[project]
+name = "inflammation-claims"
+version = "0.1.0"
+description = "慢性炎症研究结论登记库领域契约"
+requires-python = ">=3.11"

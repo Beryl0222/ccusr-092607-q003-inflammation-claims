@@ -1,0 +1,9 @@
+{
+  "event_id": "092601-003-sample-001",
+  "event_type": "COHORT_FROZEN",
+  "aggregate_type": "cohort_snapshot",
+  "aggregate_id": "inflammation_claims-001",
+  "occurred_at": "2026-09-25T10:00:00+08:00",
+  "version": 1,
+  "payload": {}
+}

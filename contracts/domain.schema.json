@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "慢性炎症研究结论登记库领域事件",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "aggregate_type",
+    "aggregate_id",
+    "occurred_at",
+    "version",
+    "payload"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "COHORT_FROZEN",
+        "ANALYSIS_REGISTERED",
+        "CLAIM_REVIEWED",
+        "STATEMENT_RELEASED",
+        "EVIDENCE_RETRACTED"
+      ]
+    },
+    "aggregate_type": {
+      "type": "string",
+      "enum": [
+        "cohort_snapshot",
+        "analysis_run",
+        "research_claim",
+        "publication_statement"
+      ]
+    },
+    "aggregate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "payload_required_by_event": {
+    "ANALYSIS_REGISTERED": [
+      "code_hash",
+      "cohort_version"
+    ],
+    "CLAIM_REVIEWED": [
+      "certainty",
+      "reviewers"
+    ],
+    "EVIDENCE_RETRACTED": [
+      "affected_refs",
+      "effective_at"
+    ]
+  },
+  "additionalProperties": false
+}
