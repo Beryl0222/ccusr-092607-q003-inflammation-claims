@@ -21,6 +21,7 @@
       "enum": [
         "COHORT_FROZEN",
         "ANALYSIS_REGISTERED",
+        "CLAIM_SUBMITTED",
         "CLAIM_REVIEWED",
         "STATEMENT_RELEASED",
         "EVIDENCE_RETRACTED"
@@ -55,6 +56,10 @@
     "ANALYSIS_REGISTERED": [
       "code_hash",
       "cohort_version"
+    ],
+    "CLAIM_SUBMITTED": [
+      "analysis_ref",
+      "analyst"
     ],
     "CLAIM_REVIEWED": [
       "certainty",
