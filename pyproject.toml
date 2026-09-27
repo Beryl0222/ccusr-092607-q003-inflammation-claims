@@ -1,5 +1,5 @@
 [project]
 name = "inflammation-claims"
 version = "0.1.0"
-description = "慢性炎症研究结论登记库领域契约"
+description = "慢性炎症研究结论登记库领域契约与登记服务"
 requires-python = ">=3.11"
